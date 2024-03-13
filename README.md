@@ -32,7 +32,7 @@ Replace `domain_name` with the domain you want to query.
 
 - `domain_age.sh`: Bash script that retrieves the creation date of a domain using WHOIS and calculates its age.
 - `domain_age.py`: Python script that performs the same functionality as the Bash script but implemented in Python.
-- `domain_age.js`: JavaScript script that performs the same functionality as the Bash script but implemented in JavaScript.
+- `domain_age.js`: For the JavaScript script, you need Node.js installed on your system, along with the Luxon library installed via npm.
 
 ## Requirements
 
