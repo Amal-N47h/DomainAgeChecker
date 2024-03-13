@@ -25,7 +25,7 @@ function getRemainingTime(inputDate) {
     const years = Math.floor(diffInDays / 365);
     const remainingDays = diffInDays % 365;
     const months = Math.floor(remainingDays / 30);
-    const remainingDaysOfMonth = remainingDays % 30;
+    const remainingDaysOfMonth = Math.floor(remainingDays % 30);
     return `${years} years, ${months} months, and ${remainingDaysOfMonth} days`;
 }
 
