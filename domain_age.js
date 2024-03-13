@@ -1,5 +1,4 @@
 const { execSync } = require('child_process');
-const { DateTime } = require('luxon');
 
 function getDomainAge(domain) {
     try {
@@ -9,9 +8,9 @@ function getDomainAge(domain) {
             console.error(`Error: Creation date not found for domain ${domain}`);
             process.exit(1);
         }
-        const creationDate = creationDateMatch[1].split("T")[0];
+        const creationDate = creationDateMatch[1].split('T')[0]; // Remove time portion
         const age = getRemainingTime(creationDate);
-        console.log(`${domain} Created on: ${creationDate}\nAge of ${domain}: ${age}`);
+        console.log(`${domain} Created Date: ${creationDate}\nAge of ${domain}: ${age}`);
     } catch (error) {
         console.error(`Error: Domain not found or whois server not available for ${domain}`);
         process.exit(1);
@@ -19,13 +18,14 @@ function getDomainAge(domain) {
 }
 
 function getRemainingTime(inputDate) {
-    const inputDateObj = DateTime.fromISO(inputDate, { zone: 'utc' });
-    const currentDate = DateTime.utc();
-    const diffInDays = currentDate.diff(inputDateObj, 'days').days;
+    const inputDateObj = new Date(inputDate);
+    const currentDate = new Date();
+    const diffInMs = currentDate - inputDateObj;
+    const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
     const years = Math.floor(diffInDays / 365);
     const remainingDays = diffInDays % 365;
     const months = Math.floor(remainingDays / 30);
-    const remainingDaysOfMonth = Math.floor(remainingDays % 30);
+    const remainingDaysOfMonth = remainingDays % 30;
     return `${years} years, ${months} months, and ${remainingDaysOfMonth} days`;
 }
 
@@ -36,4 +36,3 @@ if (process.argv.length !== 3) {
 
 const domain = process.argv[2];
 getDomainAge(domain);
-
