@@ -7,7 +7,7 @@ This repository contains scripts written in Bash, Python, and JavaScript for che
 ### Bash Script (`domain_age.sh`)
 
 ```bash
-./domain_age.sh domain_name
+bash domain_age.sh domain_name
 ```
 
 Replace `domain_name` with the domain you want to query.
