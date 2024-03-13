@@ -40,6 +40,20 @@ Replace `domain_name` with the domain you want to query.
 - For the Python script, you need Python installed on your system.
 - For the JavaScript script, you need Node.js installed on your system.
 
+### Installing WHOIS
+
+- **Windows**: You can download the WHOIS utility from [Microsoft Sysinternals website](https://learn.microsoft.com/en-us/sysinternals/downloads/whois).
+  
+- **Ubuntu/Debian**:
+  ```bash
+  sudo apt install whois
+  ```
+
+- **Arch Linux**:
+  ```bash
+  sudo pacman -S whois
+  ```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
