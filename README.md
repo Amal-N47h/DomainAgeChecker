@@ -1,8 +1,7 @@
----
-
+```yaml
 # Domain Age Checker
 
-This repository contains scripts written in Bash, Python, and JavaScript for checking the age of a domain.
+This repository contains scripts written in Bash, Python, and JavaScript for checking the age of a domain by querying its WHOIS information.
 
 ## Usage
 
@@ -45,5 +44,4 @@ Replace `domain_name` with the domain you want to query.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+```
