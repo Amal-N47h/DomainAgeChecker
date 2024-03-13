@@ -36,9 +36,9 @@ Replace `domain_name` with the domain you want to query.
 
 ## Requirements
 
-- For the Bash script, you need the `whois` command-line utility.
-- For the Python script, you need Python installed on your system.
-- For the JavaScript script, you need Node.js installed on your system.
+For the Bash script, you need the whois command-line utility.
+For the Python script, you need Python installed on your system.
+For the JavaScript script, you need Node.js installed on your system.
 
 ### Installing WHOIS
 
@@ -57,4 +57,4 @@ Replace `domain_name` with the domain you want to query.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+
