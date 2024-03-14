@@ -1,6 +1,6 @@
 # Domain Age Checker
 
-This repository contains scripts written in Bash, Python, and JavaScript for checking the age of a domain.
+The Domain Age Checker is a collection of scripts written in Bash, Python, and JavaScript for determining the age of a domain by querying its WHOIS information.
 
 ## Usage
 
